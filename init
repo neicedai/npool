@@ -1,0 +1,5 @@
+a=`cat /etc/systemd/system/npool.service |grep WorkingDirectory=|sed -r 's/WorkingDirectory=//g'`
+service npool stop
+chmod 777 npool 
+cp npool $a
+service npool start
